@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
+import '../styles/RentForm.css'
+import Submit from "../UI/Submit";
 
-const RentForm = () => {
+interface RentFormProps {
+
+}
+
+const RentForm:FC<RentFormProps> = (props) => {
     return (
-        <div>
-            
-        </div>
+        <form className='rent-form'>
+            <Submit>Submit rent</Submit>
+        </form>
     );
 };
 
