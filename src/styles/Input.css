@@ -1,0 +1,13 @@
+.input{
+    border: 1px solid #d5d7db;
+    border-radius: 1px;
+    display: inline-block;
+    height: 45px;
+    width: 80px;
+}
+
+.input[type='text']{
+    width: 370px;
+}
+
+

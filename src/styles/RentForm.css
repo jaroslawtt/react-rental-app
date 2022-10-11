@@ -1,5 +1,25 @@
 .rent-form{
+    margin-top: 40px;
     background-color: #e8eaed;
     width: 100%;
     display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    border: 1px solid #d5d7db;
+    border-radius: 4px;
+    padding: 20px 30px;
+}
+
+
+.input-block{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #222222;
+}
+
+
+.form-select{
+    height: 45px;
+    width: 80px;
 }
