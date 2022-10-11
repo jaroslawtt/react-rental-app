@@ -1,0 +1,3 @@
+
+
+export * from './appartments.interface'

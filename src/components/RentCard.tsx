@@ -1,20 +1,34 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import '../styles/Rent-Card.css'
 import Cancel from "../UI/Cancel";
+import {IApartment} from "../interfaces";
+import Controls from "./Controls";
+import RentButton from "../UI/RentButton";
+import Delete from "../UI/Delete";
 
 
-interface RentCardProps {
+interface RentCardProps extends IApartment{
 
 }
 
 
-const RentCard: FC<RentCardProps> = (props) => {
+const RentCard: FC<RentCardProps> = ({name, rooms, days, price,rented}) => {
     return (
         <div className= 'rent-card'>
-                <div>
-                    Sun Hotel / 1 bed / 2 days / $220
+                <div className='rent-card-info'>
+                    {name} / {rooms} rooms / {days} days / ${price}
                 </div>
-                <Cancel/>
+            {
+                rented ?
+                    <Controls>
+                        <Cancel/>
+                    </Controls>
+                    :
+                    <Controls>
+                        <RentButton/>
+                        <Delete/>
+                    </Controls>
+            }
         </div>
     );
 };

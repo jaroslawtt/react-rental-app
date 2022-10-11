@@ -1,6 +1,4 @@
 import React, {FC} from 'react';
-import Delete from "../UI/Delete";
-import RentButton from "../UI/RentButton";
 import '../styles/Controls.css'
 
 interface ControlsProps {
@@ -8,11 +6,10 @@ interface ControlsProps {
 }
 
 
-const Controls: FC<ControlsProps> = () => {
+const Controls: FC<ControlsProps> = (props) => {
     return (
         <div className= 'controls'>
-            <RentButton/>
-            <Delete/>
+            {props.children}
         </div>
     );
 };

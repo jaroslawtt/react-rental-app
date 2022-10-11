@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {FC} from 'react';
 import Caption from "./Caption";
 import "../styles/Rent.css"
 import RentCard from "./RentCard";
+import {IApartment} from "../interfaces";
 
-const Rent = () => {
+interface RentProps {
+    apartments: Array<IApartment>,
+}
+
+
+const Rent: FC<RentProps> = (props) => {
     return (
         <div className= "rent-block">
             <Caption>🤩 Your current rent</Caption>
-            <RentCard/>
+            {props.apartments.map(apartment => {
+                return <RentCard key={apartment.id} {...apartment}/>
+            })}
         </div>
     );
 };

@@ -11,8 +11,8 @@ const RentalForm = () => {
             <form className='rental-form'>
                 <Input type={'text'} id='name' placeholder={'Ex. Flat in the city center'} required={true}/>
                 <Input type={'number'} id={'days'} required={true} placeholder='4'/>
-                <select className= 'days-input' id='days'>
-                    <option value='3+' selected={true}>3+</option>
+                <select className= 'days-input' id='days' defaultValue={'3+'}>
+                    <option value='3+'>3+</option>
                 </select>
                 <Input type={'number'} id={'price'} required={true} placeholder={'99.00'}/>
                 <Submit/>

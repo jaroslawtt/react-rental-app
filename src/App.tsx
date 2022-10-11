@@ -3,14 +3,16 @@ import Header from "./components/Header";
 import Apartments from "./components/Apartments";
 import Rent from "./components/Rent";
 import RentalForm from "./components/RentalForm";
+import { apartments } from "./api";
 
+const store = [...apartments];
 
 function App() {
   return (
     <div className="App">
-        <Header>Apartments Marketplace</Header>
+        <Header/>
         <RentalForm/>
-        <Rent/>
+        <Rent apartments={store}/>
         <Apartments/>
     </div>
   );

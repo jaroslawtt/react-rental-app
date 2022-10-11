@@ -1,7 +1,6 @@
 import React from 'react';
 import Caption from "./Caption";
 import '../styles/Appartments.css'
-import RentCard from "./RentCard";
 
 
 const Apartments = () => {
@@ -12,8 +11,8 @@ const Apartments = () => {
                 <Caption>🏠 Available Apartments ({counter})</Caption>
                 <div className='sort-control'>
                     Sort by:
-                    <select value='sort'>
-                        <option value='highest price' selected={true}>Price: Highest price</option>
+                    <select id='sort' defaultValue={'highest price'}>
+                        <option value='highest price'>Price: Highest price</option>
                         <option value='lowest price'>Price: Lowest price</option>
                     </select>
                 </div>
