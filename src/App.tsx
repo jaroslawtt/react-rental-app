@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from "./components/Header";
-import RentForm from "./components/RentForm";
+import Controls from "./components/Controls";
+import Apartments from "./components/Apartments";
+
 
 function App() {
   return (
     <div className="App">
         <Header>Apartments Marketplace</Header>
-        <RentForm/>
+        <Apartments/>
     </div>
   );
 }

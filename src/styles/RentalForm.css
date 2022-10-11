@@ -1,5 +1,4 @@
-.rent-form{
-    margin-top: 40px;
+.rental-form{
     background-color: #e8eaed;
     width: 100%;
     display: flex;
@@ -22,4 +21,12 @@
 .form-select{
     height: 45px;
     width: 80px;
+}
+
+
+.rental-form-block{
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

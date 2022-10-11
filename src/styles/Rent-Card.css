@@ -1,0 +1,11 @@
+
+.rent-card{
+    width: 100%;
+    height: 80px;
+    border: 1px solid #d5d7db;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    align-items: center;
+    padding: 0 30px;
+}
