@@ -8,3 +8,5 @@ export interface IApartment {
     price: number,
     rented: boolean,
 }
+
+export type ApartmentState = Array<IApartment>;
