@@ -9,4 +9,6 @@ export interface IApartment {
     rented: boolean,
 }
 
-export type ApartmentState = Array<IApartment>;
+export interface ApartmentState {
+    apartments: Array<IApartment>
+}

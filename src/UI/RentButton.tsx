@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {FC} from 'react';
 import '../styles/Button.css'
+import { ButtonInterface } from "../interfaces/Button.interface";
 
+interface RentButtonProps extends ButtonInterface{
 
-const RentButton = () => {
+}
+
+const RentButton:FC<RentButtonProps> = (props) => {
     return (
-        <button className= 'btn btn-rent'>
+        <button {...props} className= 'btn btn-rent'>
             Rent
         </button>
     );

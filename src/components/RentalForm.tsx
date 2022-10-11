@@ -15,7 +15,9 @@ const RentalForm = () => {
                     <option value='3+'>3+</option>
                 </select>
                 <Input type={'number'} id={'price'} required={true} placeholder={'99.00'}/>
-                <Submit/>
+                <Submit onClick={() => {
+
+                }}/>
             </form>
         </div>
     );

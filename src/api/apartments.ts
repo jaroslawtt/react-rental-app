@@ -11,10 +11,10 @@ export const apartments: Array<IApartment> = [
     },
     {
         id: '2',
-        name: 'Sun Hotel',
-        rooms: 2,
-        days: '1',
-        price: 220,
+        name: 'Seaside beach',
+        rooms: 3,
+        days: '4',
+        price: 520,
         rented: true,
     },
 ];

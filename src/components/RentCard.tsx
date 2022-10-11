@@ -5,6 +5,9 @@ import {IApartment} from "../interfaces";
 import Controls from "./Controls";
 import RentButton from "../UI/RentButton";
 import Delete from "../UI/Delete";
+import {useDispatch} from "react-redux";
+import {useAppDispatch} from "../hooks";
+import appartmentSlice from "../store/slices/AppartmentSlice";
 
 
 interface RentCardProps extends IApartment{
@@ -12,7 +15,14 @@ interface RentCardProps extends IApartment{
 }
 
 
-const RentCard: FC<RentCardProps> = ({name, rooms, days, price,rented}) => {
+const RentCard: FC<RentCardProps> = ({name, rooms, days, price,rented, id}) => {
+    const dispatch = useAppDispatch();
+    const deleteHandler = () => {
+        dispatch(appartmentSlice.actions.deleteApartment(id));
+    }
+    const onToggle = () => {
+        dispatch(appartmentSlice.actions.toggleApartment(id));
+    }
     return (
         <div className= 'rent-card'>
                 <div className='rent-card-info'>
@@ -21,12 +31,12 @@ const RentCard: FC<RentCardProps> = ({name, rooms, days, price,rented}) => {
             {
                 rented ?
                     <Controls>
-                        <Cancel/>
+                        <Cancel onClick={onToggle}/>
                     </Controls>
                     :
                     <Controls>
-                        <RentButton/>
-                        <Delete/>
+                        <RentButton onClick={onToggle}/>
+                        <Delete onClick={deleteHandler}/>
                     </Controls>
             }
         </div>

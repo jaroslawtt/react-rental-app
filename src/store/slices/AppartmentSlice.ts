@@ -2,20 +2,22 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {ApartmentState, IApartment} from "../../interfaces";
 import { apartments } from "../../api";
 
-const initialState: ApartmentState = [...apartments];
+const initialState: ApartmentState = {
+    apartments: [...apartments],
+}
 
 const apartmentSlice = createSlice({
     name: 'apartments',
     initialState,
     reducers: {
         addApartment(state, action: PayloadAction<IApartment>){
-            state.push(action.payload);
+            state.apartments.push(action.payload);
         },
         deleteApartment(state, action: PayloadAction<string>){
-            state = state.filter(apartment => apartment.id !== action.payload);
+            state.apartments = state.apartments.filter(apartment => apartment.id !== action.payload);
         },
         toggleApartment(state, action: PayloadAction<string>){
-            state.forEach((apartment,index, array) => {
+            state.apartments.forEach((apartment,index, array) => {
                 if(apartment.id === action.payload){
                     array[index] = {
                         ...apartment,

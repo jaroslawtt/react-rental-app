@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 import '../styles/Button.css'
+import {ButtonInterface} from "../interfaces/Button.interface";
 
+interface DeleteButtonProps extends ButtonInterface{
 
-const Delete = () => {
+}
+
+const Delete: FC<DeleteButtonProps> = (props) => {
     return (
-        <button className= 'btn btn-delete'>
+        <button {...props} className= 'btn btn-delete'>
             Delete
         </button>
     );
