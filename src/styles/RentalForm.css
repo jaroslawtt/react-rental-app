@@ -1,12 +1,11 @@
 .rental-form{
+    padding: 20px 30px;
     background-color: #e8eaed;
     width: 100%;
     display: flex;
     gap: 30px;
-    justify-content: space-around;
     border: 1px solid #d5d7db;
     border-radius: 4px;
-    padding: 20px 30px;
 }
 
 
