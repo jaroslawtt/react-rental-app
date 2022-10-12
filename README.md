@@ -9,4 +9,4 @@ ads and remove existing.
 
 ## App example
 
-![alt text]https://github.com/jaroslawtt/react-rental-app/tree/master/img/view.png?raw=true)
+![alt text](https://github.com/jaroslawtt/react-rental-app/tree/master/img/view.png?raw=true)
