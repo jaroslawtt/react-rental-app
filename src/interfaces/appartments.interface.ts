@@ -3,8 +3,8 @@
 export interface IApartment {
     id: string,
     name: string,
-    rooms: number,
-    days: string,
+    rooms: string,
+    days: number,
     price: number,
     rented: boolean,
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {IApartment} from "../interfaces";
+import { IApartment } from "../interfaces";
 
 
 export const useSort = (apartments: Array<IApartment>) => {
@@ -14,5 +14,5 @@ export const useSort = (apartments: Array<IApartment>) => {
         else if(apartment1.price < apartment2.price) return -1;
         else return 0;
     });
-    return {sortType, setSortType}
+    return { sortType, setSortType };
 };

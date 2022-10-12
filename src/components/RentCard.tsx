@@ -1,13 +1,12 @@
 import React, { FC } from 'react';
 import '../styles/Rent-Card.css'
 import Cancel from "../UI/Cancel";
-import {IApartment} from "../interfaces";
+import { IApartment } from "../interfaces";
 import Controls from "./Controls";
 import RentButton from "../UI/RentButton";
 import Delete from "../UI/Delete";
-import {useDispatch} from "react-redux";
-import {useAppDispatch} from "../hooks";
-import appartmentSlice from "../store/slices/AppartmentSlice";
+import { useAppDispatch } from "../hooks";
+import { apartmentSlice } from "../store/slices";
 
 
 interface RentCardProps extends IApartment{
@@ -18,15 +17,15 @@ interface RentCardProps extends IApartment{
 const RentCard: FC<RentCardProps> = ({name, rooms, days, price,rented, id}) => {
     const dispatch = useAppDispatch();
     const deleteHandler = () => {
-        dispatch(appartmentSlice.actions.deleteApartment(id));
+        dispatch(apartmentSlice.actions.deleteApartment(id));
     }
     const onToggle = () => {
-        dispatch(appartmentSlice.actions.toggleApartment(id));
+        dispatch(apartmentSlice.actions.toggleApartment(id));
     }
     return (
         <div className= 'rent-card'>
                 <div className='rent-card-info'>
-                    {name} / {rooms} rooms / {days} days / ${price}
+                    {name} / {rooms} room(-s) / {days} day(-s) / ${price}
                 </div>
             {
                 rented ?

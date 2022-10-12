@@ -7,11 +7,15 @@ interface InputProps {
     required?: boolean,
     placeholder?: string,
     id: string,
+    value?: string | number,
+    maxLength?: number,
+    onChange?: (evt: React.ChangeEvent<HTMLInputElement>) => void,
+    min?: number,
 }
 
 const Input: FC<InputProps> = (props) => {
     return (
-        <input className = 'input' {...props}/>
+        <input {...props} className = 'input' {...props}/>
     );
 };
 

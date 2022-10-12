@@ -1,4 +1,4 @@
-import React, {ChangeEventHandler, FC, useState} from 'react';
+import React, { FC } from 'react';
 import Caption from "./Caption";
 import '../styles/Appartments.css'
 import { IApartment } from "../interfaces";
@@ -11,7 +11,7 @@ interface ApartmentsProps {
 
 
 const Apartments: FC<ApartmentsProps> = ({apartments}) => {
-    const {sortType, setSortType} = useSort(apartments)
+    const { sortType, setSortType } = useSort(apartments)
     return (
         <div className='apartments'>
             <div className='apartments-control-block'>

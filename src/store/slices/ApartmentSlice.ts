@@ -6,7 +6,7 @@ const initialState: ApartmentState = {
     apartments: [...apartments],
 }
 
-const apartmentSlice = createSlice({
+export const apartmentSlice = createSlice({
     name: 'apartments',
     initialState,
     reducers: {
@@ -28,5 +28,3 @@ const apartmentSlice = createSlice({
         }
     }
 });
-
-export default apartmentSlice;

@@ -2,4 +2,4 @@
 
 
 
-export * from './AppartmentSlice'
+export * from './ApartmentSlice'

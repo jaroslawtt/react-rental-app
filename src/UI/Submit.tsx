@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import '../styles/Button.css'
 import {ButtonInterface} from "../interfaces/Button.interface";
 
-interface SubmitProps extends ButtonInterface{
+interface SubmitProps{
 }
 
 const Submit: FC<SubmitProps> = (props) => {
