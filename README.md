@@ -1,4 +1,4 @@
-# Apartment marketplace application
+# Apartment marketplace application made via React with typescript and redux-toolkit
 
 ### It's a simple web based application for managing renting apartments marketplace. The main idea
 is making a simple admin panel for the marketplace
