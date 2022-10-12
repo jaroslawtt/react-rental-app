@@ -6,3 +6,7 @@ is making a simple admin panel for the marketplace
 It is with a list of available apartments and
 minimal functionality around it. Users have the ability to sort and filter apartments, create new
 ads and remove existing.
+
+## App example
+
+![alt text]https://github.com/jaroslawtt/react-rental-app/blob/develop/img/view.png?raw=true)
